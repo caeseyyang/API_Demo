@@ -11,6 +11,8 @@
 <body>
     <div id="weatherNow"></div>
     <script>
+        // API來源
+        // https://openweathermap.org/
         function makeRequest() {
             // Create an XMLHttpRequest object
             const xhttp = new XMLHttpRequest();
@@ -24,11 +26,11 @@
                 // 將城市及天氣狀況印在畫面上
                 const weatherNow = document.getElementById("weatherNow");
 
-                weatherNow.innerHTML = 'city:'+city+ '<br/>' +'weather:'+weather
+                weatherNow.innerHTML = 'city:' + city + '<br/>' + 'weather:' + weather
             }
             // Send a request
             // 抓台北的天氣
-            xhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=Taipei,tw&id=524901&appid=9eef2923199c8b243ebc4f66f752b251&lang=zh_tw",true);   //只是將資料拿在手中
+            xhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=Taipei,tw&id=524901&appid=9eef2923199c8b243ebc4f66f752b251&lang=zh_tw", true);   //只是將資料拿在手中
             xhttp.send();   //送出
 
 
